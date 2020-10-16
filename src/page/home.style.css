@@ -49,3 +49,12 @@
     background-color: black;
     border-radius: 50px;
 }
+
+.message-area{
+  overflow-y: auto;
+  height: 85%; 
+}
+
+.message-area .box{
+  height: 85%;
+}

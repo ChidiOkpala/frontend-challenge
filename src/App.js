@@ -7,7 +7,7 @@ import HomePage from '../src/page/home.component';
 function App() {
   return (
     <div>
-      <Route exact path='/' component={HomePage}/>
+      <Route path='/' component={HomePage}/>
     </div>
   );
 }

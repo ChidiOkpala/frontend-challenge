@@ -1,5 +1,5 @@
 const friendsMessage = {
-    FRIENDSMESSAGE: 'FRIENDSMESSAGE'
+    FRIENDSMESSAGE: 'FRIENDSNEWMESSAGE'
 };
 
 export default friendsMessage;
