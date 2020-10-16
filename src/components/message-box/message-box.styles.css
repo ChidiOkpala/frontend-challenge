@@ -1,0 +1,44 @@
+.chat-area{
+    position: absolute;
+    right: 1%;
+    bottom: 150px;
+}
+
+.chat1{
+    max-width:280px;
+}
+
+.chat-bubble {
+    border-radius: 5px;
+    display: inline-block;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.chat-bubble:before {
+    content: "\00a0";
+    display: block;
+    height: 16px;
+    width: 9px;
+    position: absolute;
+    bottom: -8.0px;
+}
+
+.chat-bubble.right {
+    background-color: black;
+    border-radius: 20px;
+}
+
+.chat-bubble.right:before {
+    background-color: black;
+    right: 20px;
+    transform: rotate(118deg) skew(-5deg);
+    -webkit-transform: rotate(118deg) skew(-5deg);
+}
+
+.chat-text{
+    font-size: 12px;
+    line-height: 25px;
+    color: #767676;
+    font-family: 'Rubik', sans-serif;
+}
