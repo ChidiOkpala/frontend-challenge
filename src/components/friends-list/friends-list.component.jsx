@@ -11,12 +11,11 @@ import './friends-list.styles.css';
 import "../../assets/bootstrap/css/bootstrap.min.css";
 
 const Friends = ({friends, messageDispatcher, idDispatcher}) => {
-    console.log(friends)
     return(
         <div  className="list-group list-group-flush">
             {
                 friends.length > 0 ? (
-                    friends.map(({id, imageUrl, name, messages}, idx) =>
+                    friends[0].map(({id, imageUrl, name, messages}, idx) =>
                     <button className="list-group-item list-group-item-action bg-light" key={idx} onClick={() => {
                         messageDispatcher(messages);
                         idDispatcher(id);

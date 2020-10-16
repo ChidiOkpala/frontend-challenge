@@ -37,7 +37,7 @@ class HomePage extends React.Component {
                 <div id="page-content-wrapper">
 
                     <nav className="navbar navbar-light bg-light border-bottom">
-                        <button className="btn btn-primary" id="menu-toggle">Toggle Menu</button>
+                        <button className="btn btn-primary" id="menu-toggle">Toggle sidebar</button>
 
                         <div className="">
                             <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
@@ -48,10 +48,10 @@ class HomePage extends React.Component {
                         </div>
                     </nav>
 
-                    <div className="container-fluid w-100 d-flex position-relative px-2 overflow-scroll" style={{height: '85%'}}>
+                    <div className="container-fluid w-100 d-flex position-relative px-2 message-area">
                         {/* message boxes */}
-
-                        <MessageBox/>
+                        
+                            <MessageBox/>
 
 
                         <div className="mt-auto w-100">
