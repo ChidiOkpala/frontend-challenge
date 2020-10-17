@@ -2,39 +2,46 @@ import React from 'react';
 import { connect  } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
-import { selectMessage } from '../../redux/message/message.selector';
-
 import './message-box.styles.css';
-
-// Bootstrap core CSS
 import "../../assets/bootstrap/css/bootstrap.min.css";
+
+import { selectMessage } from '../../redux/message/message.selector';
 
 class MessageBox extends React.Component  {
 
-    shouldComponentUpdate(nextProps) {
-        this.forceUpdate();
-        return nextProps !== this.props ? true : true
+    scrollToBottom = () => {
+        this.messagesEnd.scrollIntoView({ behavior: "smooth" });
+    }
+      
+      componentDidMount() {
+        this.scrollToBottom();
+      }
+
+    componentDidUpdate(){
+        this.scrollToBottom();
     }
     render(){
         const {message} = this.props;
-        
         return(
             <div className="chat-area">
                 {
                     message ? (
-                        message.map(({text}, idx) =>
+                        message.map(({text, time}, idx) =>
                         <div key={idx}>
                             <div className="chat1 mt-4">
                                 <div className="chat-bubble right">
                                     <div className="chat-text">{text}</div>
+                                    <span className="time">{time}</span>
                                 </div>
                             </div>
                         </div>
                         )
                     ) : (
-                        <div> start a conversation </div>
+                        <div> CHOOSE A FRIEND TO CHAT WITH </div>
                     )
                 }
+                <div ref={(el) => { this.messagesEnd = el; }}>
+                </div>
             </div>
         )    
     }

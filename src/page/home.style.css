@@ -1,5 +1,6 @@
 #wrapper {
     overflow-x: hidden;
+    max-height: 100vh;
  }
 
 #sidebar-wrapper {
@@ -51,10 +52,19 @@
 }
 
 .message-area{
-  overflow-y: auto;
-  height: 85%; 
+  overflow: auto !important;
+  height: 65vh; 
+  display: flex;
+  justify-content: flex-end;
 }
 
-.message-area .box{
-  height: 85%;
+.message-area::-webkit-scrollbar {
+  display: none;
 }
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.message-area {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+

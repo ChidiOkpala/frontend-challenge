@@ -11,13 +11,13 @@ const initial_state = {
 const friendReducer = (state = initial_state, action) => {
     switch(action.type){
         case friendsMessage.FRIENDSMESSAGE:
-            return Object.assign({}, state, {friends: addMessage(state.friends, action.payload,action.id)})
-            // {
-            //     ...state,
-            //     friends : addMessage(state.friends, action.payload, action.id)
-            // }
+            
+            return Object.assign({}, state, {
+                friends: addMessage(state.friends, action.payload,action.id, action.time)
+            })
+            
         default:
-            console.log(state)
+        
             return state;
     }
 } 

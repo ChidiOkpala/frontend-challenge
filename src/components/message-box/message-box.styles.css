@@ -1,11 +1,13 @@
 .chat-area{
-    position: absolute;
-    right: 20px;
-    bottom: 150px;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 .chat1{
     max-width:280px;
+    margin-left: auto;
 }
 
 .chat-bubble {
@@ -38,7 +40,13 @@
 
 .chat-text{
     font-size: 12px;
-    line-height: 25px;
     color: white;
     font-family: 'Rubik', sans-serif;
+}
+
+.time{
+    display: flex;
+    justify-content: flex-end;
+    color: white;
+    font-size: 8px;
 }
