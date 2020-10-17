@@ -37,7 +37,10 @@ class HomePage extends React.Component {
                 <div id="page-content-wrapper">
 
                     <nav className="navbar navbar-light bg-light border-bottom">
-                        <button className="btn btn-primary" id="menu-toggle">Toggle sidebar</button>
+                    <button class="navbar-toggler p-0" type="button" id='menu-toggle'>
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                        {/* <button className="btn btn-primary" id="menu-toggle">Toggle sidebar</button> */}
 
                         <div className="">
                             <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
