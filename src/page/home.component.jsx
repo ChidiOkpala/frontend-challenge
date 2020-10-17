@@ -22,12 +22,12 @@ class HomePage extends React.Component {
     render(){
 
         return(
-            <div className="d-flex h-100" id="wrapper">
+            <div className="d-flex" id="wrapper">
 
                 {/* Sidebar  */}
                 <div className="bg-light border-right" id="sidebar-wrapper">
                     <div className="sidebar-heading"> FRIENDS</div>
-
+                    {/* friends listing */}
                     <Friends/>
 
                 </div>
@@ -48,10 +48,11 @@ class HomePage extends React.Component {
                         </div>
                     </nav>
 
-                    <div className="container-fluid w-100 d-flex position-relative px-2 message-area">
+                    <div className="container-fluid w-100 d-flex flex-column px-2 ">
                         {/* message boxes */}
-                        
+                        <div className='message-area mt-auto py-3'>
                             <MessageBox/>
+                        </div>
 
 
                         <div className="mt-auto w-100">

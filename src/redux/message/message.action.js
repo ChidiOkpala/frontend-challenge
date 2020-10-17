@@ -13,3 +13,12 @@ export const idActionDispatcher = (id) => {
         payload: id
     }
 };
+
+export const newMessageDispatcher = (message, time) => {
+    console.log(time)
+    return {
+        type: messageActions.MESSAGEDISPATCH,
+        payload: message,
+        time:  time
+    }
+}
