@@ -1,0 +1,85 @@
+#wrapper {
+    overflow-x: hidden;
+    max-height: 100vh;
+ }
+
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -15rem;
+  -webkit-transition: margin .25s ease-out;
+  -moz-transition: margin .25s ease-out;
+  -o-transition: margin .25s ease-out;
+  transition: margin .25s ease-out;
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group {
+  width: 15rem;
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
+}
+
+.roundbg{
+    height: 30px;
+    width: 30px;
+    background-color: black;
+    border-radius: 50px;
+}
+
+.message-area{
+  overflow: auto !important;
+  height: 65vh; 
+  display: flex;
+  justify-content: flex-end;
+}
+
+.message-area::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.message-area {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.navbar-toggler{
+  border: none !important;
+  padding: 0;
+}
+
+.navbar-toggler:focus{
+  outline: none;
+}
+
+.navbar-icon{
+  width: 30px;
+  height: 30px;
+  border: none;
+}
+
